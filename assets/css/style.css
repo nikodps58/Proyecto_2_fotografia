@@ -1,3 +1,63 @@
+/* Estilos genericos */
+
+h1{
+    font-family: var(--fuente1) ;
+    font-size: 1.4rem;
+    color: var(--color1);
+}
+
+h2{
+    font-size: 1.8rem;
+    color: var(--color2);
+    font-weight: 100;
+}
+
+h3{
+    width: 100%;
+    font-family: var(--fuente1) ;
+    font-size: 2rem;
+    color: var(--color1);
+    font-weight: 100;
+    text-align: left;
+}
+
+h4{
+    font-family: var(--fuente3) ;
+    font-size: 1.2rem;
+    color: var(--color2);
+    letter-spacing: 3px;
+    text-align: left;
+}
+
+p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+}
+
+
+.boton {
+background-color: var(--color1); 
+/* background-color: rgb(255, 127, 197); */
+padding: .5rem 2rem;  /* puede tener 1, 2 ó 3 valores*/
+border-radius: 1rem;
+border: .5px solid var(--color1);
+font-size: 1.2rem;
+color: var(--color0);
+
+}
+
+.boton:hover{
+    background-color: var(--color0) ;
+    color: var(--color1);
+    transition: 0.5s;
+}
+
+.boton:active{
+    transform: scale(0.9);
+    transition: 0.1s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +68,13 @@
 /* variables y fuentes*/
 @font-face {
     font-family: "fuente1" ;
-    src: url("../fonts/Oswald/static/Oswald-SemiBold.ttf");
+    src: url("../fonts/Oswald/static/Oswald-SemiBold.ttf"); 
+    /* src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf"); */
 }
 
 @font-face {
     font-family: "fuente2" ;
-    src: url("../fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+    src: url("../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
 }
 
 
@@ -24,15 +85,14 @@
 
 :root{
     --color0:white;
-    --color1:black;
+    --color1:rgb(59, 58, 58);
     --color2:grey;
-    --color3:yellow;
+    --color3:rgb(187, 58, 133);
     --fuente1:"fuente1";
     --fuente2:"fuente2";
     --fuente3:"fuente3";
+    font-family: var(--fuente2);
     }
-
-
 
 /* estilos web */
 /* estilos del nav */
@@ -110,4 +170,119 @@ header{
  background-repeat: no-repeat;
  background-attachment: fixed;
 }
+
+header .contenedor{
+    margin-top: .5vh;
+    /* background-color: aquamarine; */
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: var(--fuente1);
+    color: var(--color0);
+    user-select: none;
+}
+header .contenedor :nth-child(1){
+    font-size: 7.8vw;
+    line-height: 7vw;
+}
+
+header .contenedor :nth-child(2){
+    font-size: 5.1vw;
+    line-height: 5vw;
+}
+header .contenedor :nth-child(3){
+    font-size: 5.8vw;
+    line-height: 5vw;
+}
+header .contenedor :nth-child(4){
+    font-size: 5.8vw;
+    line-height: 5vw;
+}
+header .contenedor :nth-child(5){
+    font-size: 5.8vw;
+    line-height: 5vw;
+}
+header .contenedor :nth-child(6){
+    font-size: 5.8vw;
+    line-height: 5vw;
+}
+header .contenedor :nth-child(7){
+    font-size: 5.8vw;
+    line-height: 5vw;
+}
+header .contenedor :nth-child(8){
+    font-size: 5.8vw;
+    line-height: 5vw;
+}
+
+/* MAIN */
+/* seccion presentacion */
+#sectPresentacion {
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+#sectPresentacion Article {
+    max-width: 1200px;
+    width: 95%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2rem;
+}
+
+#contenedor_Servicios{
+    width: 100%;
+    max-width: 550px;
+    min-width: 320;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    }
+
+#contenedor_Servicios .Servicio{
+    width: 100%;
+    height: 800px;
+    max-width: 550px;
+    min-width: 320;
+    height: 800px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#contenedor_Servicios .Servicio .contenedor_foto{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+#contenedor_Servicios .Servicio .contenedor_foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0);
+    transition: 1s;
+}
+
+#contenedor_Servicios .Servicio .contenedor_foto img:hover{
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+
 /* coment */
