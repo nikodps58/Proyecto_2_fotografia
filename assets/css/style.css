@@ -4,7 +4,7 @@ h1{
     font-family: var(--fuente1) ;
     font-size: 1.4rem;
     color: var(--color1);
-}
+    }
 
 h2{
     font-size: 1.8rem;
@@ -43,6 +43,8 @@ padding: .5rem 2rem;  /* puede tener 1, 2 ó 3 valores*/
 border-radius: 1rem;
 border: .5px solid var(--color1);
 font-size: 1.2rem;
+letter-spacing: 3px;
+cursor: pointer;
 color: var(--color0);
 
 }
@@ -54,8 +56,13 @@ color: var(--color0);
 }
 
 .boton:active{
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition: 0.1s;
+}
+
+.anchoestrecho{
+    max-width: 1200px;
+    width: 95%;
 }
 
 * {
@@ -63,6 +70,7 @@ color: var(--color0);
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* variables y fuentes*/
@@ -96,6 +104,10 @@ color: var(--color0);
 
 /* estilos web */
 /* estilos del nav */
+nav{
+    position: fixed;
+    z-index: 100;
+}
 nav, header, main, footer{
     width: 100%;
     max-width: 2560px;
@@ -112,8 +124,7 @@ nav .sup{
     justify-content: center;
     height: 5vh;
     max-height: 40px;
-    /* background-color: aquamarine; */
-    background-color:color0;
+    background-color:var(--color0);
     position: relative;
 }
 nav .inf{
@@ -124,8 +135,7 @@ nav .inf{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* background-color:beige; */
-    background-color:color0;
+    background-color:var(--color0);
     column-gap: 4rem;
     list-style: none;
 }
@@ -144,31 +154,43 @@ nav .sup img{
     position: absolute;
     left: 1rem;
     top: 0.5rem;
-    }
+}
 
-    nav .inf a{
+nav .inf a{
     text-decoration: none;
-    }
+}
 
-    nav .inf a:visited{
-        color:black;
-    }
-    nav .inf a:hover{
-        color:orange;
-        font-weight: bolder;
-    }
+nav .inf a:visited{
+    color:black;
+}
+nav .inf a:hover{
+    color:orange;
+    font-weight: bolder;
+}
 
-    h1{
-        color:var(--color1)
-    }
-
+section{
+    margin-top: 2rem;
+}
+section, article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+article{
+    margin-top: 2rem;
+    row-gap: 1rem;
+}
+  
     /* estilos del header */
 header{
+    transform: translateY(80px);
     height: 90vh;
- background-image:url("../img/header_2560.jpg");   
- background-size: cover;
- background-repeat: no-repeat;
- background-attachment: fixed;
+    background-image:url("../img/header_2560.jpg");   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header .contenedor{
@@ -184,13 +206,13 @@ header .contenedor{
     user-select: none;
 }
 header .contenedor :nth-child(1){
-    font-size: 7.8vw;
+    font-size: 7.5vw;
     line-height: 7vw;
 }
 
 header .contenedor :nth-child(2){
-    font-size: 5.1vw;
-    line-height: 5vw;
+    font-size: 4.9vw;
+    line-height: 4.5vw;
 }
 header .contenedor :nth-child(3){
     font-size: 5.8vw;
@@ -219,38 +241,17 @@ header .contenedor :nth-child(8){
 
 /* MAIN */
 /* seccion presentacion */
-#sectPresentacion {
-    background-color: aquamarine;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 2rem;
-}
 
-#sectPresentacion Article {
-    max-width: 1200px;
-    width: 95%;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    row-gap: 2rem;
-}
+
 
 #contenedor_Servicios{
     width: 100%;
-    max-width: 550px;
-    min-width: 320;
-    height: 800px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    row-gap: 1rem;
+    gap: 1rem;
     }
 
 #contenedor_Servicios .Servicio{
@@ -282,7 +283,35 @@ header .contenedor :nth-child(8){
 #contenedor_Servicios .Servicio .contenedor_foto img:hover{
     filter: saturate(1);
     transform: scale(1.1);
+    transition: 1s;
+    }
+
+/* SECCION ALBUM*/
+/* ARTICULO SLIDER*/
+#slider{
+    width: 100%;
+    height: 85vh;
+    position: relative;
+}
+#slider :nth-child(1), #slider :nth-child(2){
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .5;
+    cursor: pointer;
+}
+#slider :nth-child(1){
+    left: 2rem;
+}
+#slider :nth-child(2){
+    right: 2rem;
 }
 
+#fotoactiva{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* coment */
