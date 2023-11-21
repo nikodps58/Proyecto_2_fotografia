@@ -304,6 +304,7 @@ header .contenedor :nth-child(8){
 #slider :nth-child(1){
     left: 2rem;
 }
+
 #slider :nth-child(2){
     right: 2rem;
 }
