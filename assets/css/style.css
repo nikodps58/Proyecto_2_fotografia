@@ -366,6 +366,7 @@ header .contenedor :nth-child(8){
 .persona .avatar :nth-child(2):hover{
     filter: sepia(1) opacity(.7);
     transition: 1s;    
+    transform: translate(-50%, -50%) scale(.7);
     transform: rotate(40deg);
 }
 
