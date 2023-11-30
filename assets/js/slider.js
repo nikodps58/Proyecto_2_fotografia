@@ -1,8 +1,8 @@
 /* DECLARACION DE VARIABLES */
 var numfotos = 12;  /* numero de fotos */
 var ordenprincipal, ordensiguiente;
-var intervalo, temporizador;
-var tiempoespera = 5000;
+var intervalo;
+var tiempoespera = 2000;
 
 const flechaizd = document.getElementById("flechaizd");
 const flechader = document.getElementById("flechader");
@@ -26,13 +26,12 @@ flechaizd.addEventListener("click", function(){
     };
     fotoactiva.src=`./assets/img/slider${ordensiguiente}_2560.jpg`;
     fotoactiva.setAttribute("orden",ordensiguiente);
-    clearInterval(intervalo);
-    crearintervalo(tiempoespera);
+    crearintervalo(tiempoespera-2000);
     console.log('ordensiguiente='+ordensiguiente);
-    });
+});
 
 flechader.addEventListener("click", function(){
-    /*
+    
     ordenprincipal = fotoactiva.getAttribute("orden");
     ordenprincipal=Number(ordenprincipal);
     if(ordenprincipal===numfotos){
@@ -42,10 +41,8 @@ flechader.addEventListener("click", function(){
     };
     fotoactiva.src=`./assets/img/slider${ordensiguiente}_2560.jpg`;
     fotoactiva.setAttribute("orden",ordensiguiente);
-    */
-    funcionrandom();   
-    clearInterval(intervalo);
-    crearintervalo(tiempoespera);
+     
+    crearintervalo(tiempoespera-2000);
 });
 
 /* zona de ejecucion de foto random */
@@ -75,7 +72,8 @@ function funcionrandom(){
     /* esto redondea al entero siguiente
         numaleatorio=Math.ceil(numaleatorio);*/
     numaleatorio=Math.round(numaleatorio);
-    while (numaleatorio===numaleatorio2){
+    console.log('numaleatorio='+numaleatorio+' y numaleatorio2='+numaleatorio2);
+    if(numaleatorio=numaleatorio2){
         console.log('numaleatorio era el mismo='+numaleatorio);
         numaleatorio=Math.random()*numfotos;
         numaleatorio=Math.round(numaleatorio);
@@ -91,5 +89,9 @@ function funcionrandom(){
 /* funcion de cambio automatico de imagenes cada x segundos */
 
 function crearintervalo(valorRecibido){
-intervalo=window.setInterval(funcionrandom,valorRecibido);
+    if(intervalo != undefined){
+        clearInterval(intervalo)
+    }
+    intervalo=window.setInterval(funcionrandom,valorRecibido);
 }
+
