@@ -1,3 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* variables y fuentes*/
+  @font-face {
+      font-family: "fuente1" ;
+      src: url("../fonts/Oswald/static/Oswald-SemiBold.ttf"); 
+      /* src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf"); */
+  }
+  
+  @font-face {
+      font-family: "fuente2" ;
+      src: url("../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+  }
+  
+  
+@font-face {
+    font-family: "font3" ;
+    src: url("../fonts/Spline_Sans/static/SplineSans-Regular.ttf");
+}
+  
+:root{
+    --color0:white;
+    --color1:rgb(59, 58, 58);
+    --color2:grey;
+    --color3:rgb(187, 58, 133);
+    --fuente1:"fuente1";
+    --fuente2:"fuente2";
+    --fuente3:"fuente3";
+    font-family: var(--fuente2);
+}
+  
+
 /* Estilos genericos */
 
 h1{
@@ -65,50 +103,15 @@ color: var(--color0);
     width: 95%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-/* variables y fuentes*/
-@font-face {
-    font-family: "fuente1" ;
-    src: url("../fonts/Oswald/static/Oswald-SemiBold.ttf"); 
-    /* src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf"); */
-}
-
-@font-face {
-    font-family: "fuente2" ;
-    src: url("../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
-}
-
-
-@font-face {
-    font-family: "font3" ;
-    src: url("../fonts/Spline_Sans/static/SplineSans-Regular.ttf");
-}
-
-:root{
-    --color0:white;
-    --color1:rgb(59, 58, 58);
-    --color2:grey;
-    --color3:rgb(187, 58, 133);
-    --fuente1:"fuente1";
-    --fuente2:"fuente2";
-    --fuente3:"fuente3";
-    font-family: var(--fuente2);
-    }
 
 /* estilos web */
 /* estilos del nav */
 nav{
     position: fixed;
     z-index: 100;
+    top: 0;
 }
-nav, header, main, footer{
+nav, header, main{
     width: 100%;
     max-width: 2560px;
     display: flex;
@@ -116,6 +119,60 @@ nav, header, main, footer{
     align-items: flex-start;
     justify-content: flex-start;
 }
+
+footer{
+    width: 100%;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#contendido_footer{
+    width: 100%;
+    max-width: 2506px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo_footer{
+    width: 300px;
+}
+
+#footinferior{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+#footinferior p{
+    font-size: 1rem;
+}
+
+#footsuperior{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#footsuperior .infofooter{
+    width: 30%;
+    min-width: 300px;
+    height: 400px;
+    background-color: aquamarine;
+}
+
+
+
 nav .sup{
     width: 100%;
     display: flex;
@@ -158,13 +215,14 @@ nav .sup img{
 
 nav .inf a{
     text-decoration: none;
+    color:var(--color1);
 }
 
 nav .inf a:visited{
-    color:black;
+    color:var(--color1);
 }
 nav .inf a:hover{
-    color:orange;
+    color:var(--color3);
     font-weight: bolder;
 }
 
@@ -185,7 +243,8 @@ article{
   
     /* estilos del header */
 header{
-    transform: translateY(80px);
+    /*transform: translateY(80px);*/
+    margin-top: 80px;
     height: 90vh;
     background-image:url("../img/header_2560.jpg");   
     background-size: cover;
@@ -337,13 +396,15 @@ header .contenedor :nth-child(8){
 
 .persona .avatar{
     width: 100%;
+    min-width: 350px;
+    height: 350px;
     position: relative;
 }
 
 .persona .avatar :nth-child(1){
     width: 100%;
     height: 100%;
-    object-fit: over;
+    object-fit: cover;
     border-radius: 50%;
     transition: 1s;
     
@@ -359,16 +420,16 @@ header .contenedor :nth-child(8){
     transition: 1s;
 }
 
+/*  quitado porque ahora esto se controla por js en el avatares.js
 .persona .avatar :nth-child(1):hover{
     transform: rotate(40deg);
 }
+*/
 
 .persona .avatar :nth-child(2):hover{
-    filter: sepia(1) opacity(.7);
+    filter: sepia(0) opacity(.7);
     transition: 1s;    
-    transform: translate(-50%, -50%) scale(.7);
-    transform: rotate(40deg);
+    /* transform: rotate(40deg); */
 }
-
 
 /* coment */

@@ -72,9 +72,9 @@ function funcionrandom(){
     /* esto redondea al entero siguiente
         numaleatorio=Math.ceil(numaleatorio);*/
     numaleatorio=Math.round(numaleatorio);
-    console.log('numaleatorio='+numaleatorio+' y numaleatorio2='+numaleatorio2);
+    /*console.log('numaleatorio='+numaleatorio+' y numaleatorio2='+numaleatorio2);*/
     if(numaleatorio=numaleatorio2){
-        console.log('numaleatorio era el mismo='+numaleatorio);
+        /*console.log('numaleatorio era el mismo='+numaleatorio);*/
         numaleatorio=Math.random()*numfotos;
         numaleatorio=Math.round(numaleatorio);
     };
@@ -83,7 +83,7 @@ function funcionrandom(){
     }
     fotoactiva.src=`./assets/img/slider${numaleatorio}_2560.jpg`;
     fotoactiva.setAttribute("orden",numaleatorio);
-    console.log('numaleatorio='+numaleatorio);
+    /*console.log('numaleatorio='+numaleatorio);*/
 };
 
 /* funcion de cambio automatico de imagenes cada x segundos */
