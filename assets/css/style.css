@@ -120,6 +120,8 @@ nav, header, main{
     justify-content: flex-start;
 }
 
+/* estilos de footer */
+
 footer{
     width: 100%;
     background-color: var(--color1);
@@ -127,6 +129,10 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    padding: 2rem;
+    color:var(--color0);
+    font-family: var(--fuente3);
+    padding: 4rem 0;
 }
 
 #contendido_footer{
@@ -136,24 +142,13 @@ footer{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    row-gap: 2rem;
 }
 
 #logo_footer{
     width: 300px;
 }
 
-#footinferior{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    row-gap: 1rem;
-}
-
-#footinferior p{
-    font-size: 1rem;
-}
 
 #footsuperior{
     width: 100%;
@@ -164,11 +159,41 @@ footer{
     flex-wrap: wrap;
 }
 
-#footsuperior .infofooter{
+#footsuperior .info_footer{
     width: 30%;
     min-width: 300px;
-    height: 400px;
+    height: 300px;
     background-color: aquamarine;
+}
+
+#footsuperior .info_footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+}
+
+#footsuperior .info_footer ul li a{
+    color: var(--color0);
+    text-decoration: none;
+    font-size: 1rem; 
+    font-weight: 100; 
+}
+
+
+#footinferior{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem; 
+}
+
+#footinferior p{
+    font-size: 1rem;
 }
 
 
