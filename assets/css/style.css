@@ -163,16 +163,22 @@ footer{
     width: 30%;
     min-width: 300px;
     height: 300px;
-    background-color: aquamarine;
+    background-color: hsl(160, 51%, 15%);
 }
 
 #footsuperior .info_footer ul{
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     row-gap: 1.5rem;
+}
+
+#footsuperior .info_footer ul li{
+    flex-direction: rown;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #footsuperior .info_footer ul li a{
@@ -181,6 +187,13 @@ footer{
     font-size: 1rem; 
     font-weight: 100; 
 }
+
+#footsuperior .info_footer ul li a img{
+width: 50px;
+
+}
+    
+
 
 
 #footinferior{
