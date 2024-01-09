@@ -2,7 +2,7 @@
 var numfotos = 12;  /* numero de fotos */
 var ordenprincipal, ordensiguiente;
 var intervalo;
-var tiempoespera = 2000;
+var tiempoespera = 4000;
 
 const flechaizd = document.getElementById("flechaizd");
 const flechader = document.getElementById("flechader");
