@@ -166,9 +166,9 @@
         <div id="contenedor_form">
             <form action="./php/enviar.php" method="post">
                 <h2>Formulario de contacto</h2>
-                <input type="text" name="nombre" placeholder="Nombre*" minlength="4" maxlength="65">
+                <input type="text" name="nombre" placeholder="Nombre*" minlength="4" maxlength="65" required>
                 <input type="email" name="email" placeholder="email" minlength="6" maxlength="100" required>
-                <input type="tel" name="telefono" minlength="9" placeholder="telefono">
+                <input type="tel" name="telefono" minlength="9" placeholder="telefono" required>
                 <textarea name="mensaje" placeholder="Escriba aqui su mensaje" maxlength="500"  cols="30" rows="10"></textarea>
                 <input type="submit" value="enviar" class="boton" id="boton_form">
             </form>

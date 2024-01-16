@@ -17,8 +17,8 @@ class clase_comprobaciones{
         return empty($var) ? true : false;
     }
 
-    
-º
+   
+
     //FILTRAR DATOS SCRIPTS
     //DEVOLVEMOS EL VALOR YA FILTRADO
     public function filtrarValor($var) {
