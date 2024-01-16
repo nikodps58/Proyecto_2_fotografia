@@ -1,12 +1,59 @@
 <?php
-ini_set('display_erros',1);
+require_once ('../php/includes/_config.php');
+require_once ('../php/class/comprobaciones.php');
 
-/* recoger datos y comprobar */
-$destino="nicolas.dps@gmail.com";
-$nombre = $_POST["nombre"];
-$email = $_POST["email"];
-$telefono = $_POST["telefono"];
-$mensaje = $_POST["mensaje"];
+$comprobacion = new clase_comprobaciones;
+
+if(isset($_POST)){
+
+    /* recoger datos y comprobar */
+    $destino="nicolas.dps@gmail.com";
+    $nombre = $_POST["nombre"];
+    $email = $_POST["email"];
+    $telefono = $_POST["telefono"];
+    $mensaje = $_POST["mensaje"];
+
+    // comprobamos los valores recogidos 
+    if($comprobacion->comprobarvacio($nombre){
+        header("location:../index.html?fallo1#hitocontacto");
+        die;  // salimos del php
+    }
+
+    // limpiamos de texto malicioso
+    $comprobacion->filtrarValorlight($nombre);
+
+    /*  validaciones de correo */
+    if(comprobacion->comprobarvacio($email)){
+        header("location:../index.html?fallo2#hitocontacto");
+        die;  // salimos del php
+    }
+
+    // limpiamos de codigo malicioso
+    comprobacion->filtrarvalorlight($email);
+    if(!$comprobacion->validar_email($email)){
+        header("location:../index.html?fallo3#hitocontacto");
+        die;  // salimos del php
+    }
+
+    // validaciones del telefono
+    if(comprobacion->comprobarvacio($telefono)){
+        header("location:../index.html?fallo5#hitocontacto");
+        die;  // salimos del php
+    }
+
+    // comprobaciones del mensaje
+    if(comprobacion->comprobarvacio($mensaje)){
+        header("location:../index.html?fallo6#hitocontacto");
+        die;  // salimos del php
+    }
+
+    // limpiamos
+    comprobacion->filtrarvalorlight($mensaje);
+
+    // fin comprobaciones PHP
+}
+
+
 
 /* datos que recogemos de su cliente */
 /* ip */
