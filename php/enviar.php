@@ -53,7 +53,7 @@ if(isset($_POST)){
     // fin comprobaciones PHP
 }
 
-
+echo "llegue aqui";
 
 /* datos que recogemos de su cliente */
 /* ip */
