@@ -164,7 +164,26 @@
    <div id="hitocontacto"></div>
    <footer>
         <div id="contenedor_form">
-            <form action="./php/enviar.php" method="post">
+           <!--  <form action="./php/enviar.php" method="post">
+                <h2>Formulario de contacto</h2>
+                <input type="text" name="nombre" placeholder="Nombre*" minlength="4" maxlength="65" required>
+                <input type="email" name="email" placeholder="email" minlength="6" maxlength="100" required>
+                <input type="tel" name="telefono" minlength="9" placeholder="telefono" required>
+                <textarea name="mensaje" placeholder="Escriba aqui su mensaje" maxlength="500"  cols="30" rows="10"></textarea>
+                <input type="submit" value="enviar" class="boton" id="boton_form">
+            </form> -->
+            <!--  
+            <form action="./php/enviar2.php" method="post">
+                <h2>Formulario de contacto</h2>
+                <input type="text" name="nombre" placeholder="Nombre*" minlength="4" maxlength="65" required>
+                <input type="email" name="email" placeholder="email" minlength="6" maxlength="100" required>
+                <input type="tel" name="telefono" minlength="9" placeholder="telefono" required>
+                <textarea name="mensaje" placeholder="Escriba aqui su mensaje" maxlength="500"  cols="30" rows="10"></textarea>
+                <input type="submit" value="enviar" class="boton" id="boton_form">
+            </form> -->
+            
+            
+            <form action="./php/enviarPHPMailer.php" method="post">
                 <h2>Formulario de contacto</h2>
                 <input type="text" name="nombre" placeholder="Nombre*" minlength="4" maxlength="65" required>
                 <input type="email" name="email" placeholder="email" minlength="6" maxlength="100" required>
@@ -172,6 +191,7 @@
                 <textarea name="mensaje" placeholder="Escriba aqui su mensaje" maxlength="500"  cols="30" rows="10"></textarea>
                 <input type="submit" value="enviar" class="boton" id="boton_form">
             </form>
+            
             <img id="imagen_footer" src="./assets/img/LOGO_500.png" alt="">
         </div>
         <div id="contendido_footer">
